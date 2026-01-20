@@ -2,78 +2,47 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>[DEV] Feature-X Branch</title>
+    <title>My App (Production)</title>
     <style>
         body {
-            font-family: monospace; /* Monospace font for devs */
-            background-color: #fffbe6; /* Yellowish tint to warn user */
+            font-family: sans-serif;
+            background-color: #ffffff; /* Clean White Background */
             color: #333;
             text-align: center;
             padding: 50px;
-            margin-top: 30px; /* Space for ribbon */
-        }
-        /* WARNING RIBBON */
-        .dev-ribbon {
-            background-color: #ff9800;
-            color: blue;
-            font-weight: bold;
-            position: fixed;
-            top: 0; left: 0; width: 100%;
-            padding: 5px;
-            text-align: center;
         }
         .container {
-            border: 2px dashed #ff9800; /* Dashed border for Dev */
+            border: 1px solid #ddd;
             padding: 20px;
+            border-radius: 8px;
             max-width: 600px;
             margin: 0 auto;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
         }
-        .btn-danger {
-            background-color: red;
+        .btn-primary {
+            background-color: #0070f3; /* Vercel Blue */
             color: white;
             padding: 10px 20px;
             border: none;
             border-radius: 5px;
             cursor: pointer;
-            margin-top: 20px;
         }
-        .debug-info {
-            background: #333;
-            color: #0f0;
-            margin-top: 20px;
-            padding: 10px;
-            text-align: left;
-            font-size: 12px;
-        }
+        /* Hide debug tools on Main */
+        .debug-tool { display: none; }
     </style>
 </head>
 <body>
 
-    <div class="dev-ribbon">⚠️ YOU ARE ON A SUB-BRANCH (feature-x)</div>
-
     <div class="container">
-        <h1>[TEST] My App</h1>
-        <p>Testing new features. Data here is <b>Temporary</b>.</p>
+        <h1>Welcome to My App</h1>
+        <p>This is the live version running on the <b>Main Branch</b>.</p>
         
-        <button class="btn-danger" onclick="resetDevDB()">🗑️ RESET DEV DATABASE</button>
-
-        <div class="debug-info">
-            > ENV: Preview<br>
-            > API: dev-api.example.com<br>
-            > BRANCH: feature/login-update
-        </div>
+        <button class="btn-primary" onclick="alert('Hello User!')">User Action</button>
     </div>
 
     <script>
-        // 4. Extra Logic for Developers
-        function resetDevDB() {
-            // This logic would destroy the main site, but it's safe here
-            const confirmAction = confirm("Are you sure? This wipes the test database.");
-            if(confirmAction) alert("Dev Database Wiped!");
-        }
-        
-        console.log("DEBUG MODE: Full logging enabled.");
-        console.log("Token: abc-123-xyz"); // Sensitive info visible to devs
+        console.log("Production Mode: Analytics initialized.");
+        // No debug logs, no secret tools.
     </script>
 
 </body>
