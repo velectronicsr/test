@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>My App (Production)</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            background-color: #ffffff; /* Clean White Background */
+            color: #333;
+            text-align: center;
+            padding: 50px;
+        }
+        .container {
+            border: 1px solid #ddd;
+            padding: 20px;
+            border-radius: 8px;
+            max-width: 600px;
+            margin: 0 auto;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+        }
+        .btn-primary {
+            background-color: #0070f3; /* Vercel Blue */
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+        /* Hide debug tools on Main */
+        .debug-tool { display: none; }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1>Welcome to My App</h1>
+        <p>This is the live version running on the <b>Main Branch</b>.</p>
+        
+        <button class="btn-primary" onclick="alert('Hello User!')">User Action</button>
+    </div>
+
+    <script>
+        console.log("Production Mode: Analytics initialized.");
+        // No debug logs, no secret tools.
+    </script>
+
+</body>
+</html>
